@@ -261,6 +261,13 @@ data = {
         }
     }
 }
+@app.route("/")
+def home():
+    return "Flask App is running on Vercel!"
+
+@app.route("/favicon.ico")
+def favicon():
+    return "", 204
 
 @app.route("/callback", methods=['POST'])
 def callback():
